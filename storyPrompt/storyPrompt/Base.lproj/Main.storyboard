@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="CsF-WW-3qx">
-                                <rect key="frame" x="20" y="111" width="374" height="377.5"/>
+                                <rect key="frame" x="20" y="111" width="374" height="430.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rHd-6j-lbN">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -89,8 +89,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="arZ-g0-4Hd">
+                                        <rect key="frame" x="0.0" y="347.5" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="Horror"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-Lr-wh8">
-                                        <rect key="frame" x="0.0" y="347.5" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="400.5" width="374" height="30"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Generate Story Prompt"/>
                                     </button>
