@@ -129,7 +129,7 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Generate Story Prompt"/>
                                         <connections>
-                                            <segue destination="mHj-aV-l2V" kind="show" id="lmq-KP-nJi"/>
+                                            <segue destination="mHj-aV-l2V" kind="show" identifier="storyPrompt" id="lmq-KP-nJi"/>
                                         </connections>
                                     </button>
                                 </subviews>

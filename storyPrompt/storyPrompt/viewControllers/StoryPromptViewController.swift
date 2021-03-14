@@ -13,20 +13,14 @@ class StoryPromptViewController: UIViewController {
     @IBOutlet weak var storyPromptTextView: UITextView!
 
 
-    var storyPrompt = StoryPromptEntry()
+    var storyPrompt: StoryPromptEntry?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
 
-        //set inital values to storyPrompt
-        storyPrompt.noun = "toaster"
-        storyPrompt.adjective = "smelly"
-        storyPrompt.verb = "swims"
-        storyPrompt.number = 7
-
         //set the description to storyPromptTextView
-        storyPromptTextView.text = storyPrompt.description
+        storyPromptTextView.text = storyPrompt?.description
 
         
     }
