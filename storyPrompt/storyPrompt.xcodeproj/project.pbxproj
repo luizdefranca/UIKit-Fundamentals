@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		255FC24925FD549200D22CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255FC24825FD549200D22CB4 /* AppDelegate.swift */; };
 		255FC24B25FD549200D22CB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255FC24A25FD549200D22CB4 /* SceneDelegate.swift */; };
-		255FC24D25FD549200D22CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255FC24C25FD549200D22CB4 /* ViewController.swift */; };
+		255FC24D25FD549200D22CB4 /* AddStoryPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255FC24C25FD549200D22CB4 /* AddStoryPromptViewController.swift */; };
 		255FC25025FD549200D22CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255FC24E25FD549200D22CB4 /* Main.storyboard */; };
 		255FC25225FD549500D22CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255FC25125FD549500D22CB4 /* Assets.xcassets */; };
 		255FC25525FD549500D22CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255FC25325FD549500D22CB4 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		255FC24525FD549200D22CB4 /* storyPrompt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storyPrompt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		255FC24825FD549200D22CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		255FC24A25FD549200D22CB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		255FC24C25FD549200D22CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		255FC24C25FD549200D22CB4 /* AddStoryPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryPromptViewController.swift; sourceTree = "<group>"; };
 		255FC24F25FD549200D22CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		255FC25125FD549500D22CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		255FC25425FD549500D22CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		255FC26925FDD83F00D22CB4 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				255FC24C25FD549200D22CB4 /* ViewController.swift */,
+				255FC24C25FD549200D22CB4 /* AddStoryPromptViewController.swift */,
 				255FC26625FDD83700D22CB4 /* StoryPromptViewController.swift */,
 			);
 			path = viewControllers;
@@ -164,7 +164,7 @@
 			files = (
 				255FC26725FDD83800D22CB4 /* StoryPromptViewController.swift in Sources */,
 				255FC26325FD55F300D22CB4 /* StoryPrompts.swift in Sources */,
-				255FC24D25FD549200D22CB4 /* ViewController.swift in Sources */,
+				255FC24D25FD549200D22CB4 /* AddStoryPromptViewController.swift in Sources */,
 				255FC24925FD549200D22CB4 /* AppDelegate.swift in Sources */,
 				255FC25F25FD55C100D22CB4 /* StoryPromptEntry.swift in Sources */,
 				255FC24B25FD549200D22CB4 /* SceneDelegate.swift in Sources */,
