@@ -140,13 +140,59 @@
             </objects>
             <point key="canvasLocation" x="-461" y="-39"/>
         </scene>
+        <!--Story Prompt View Controller-->
+        <scene sceneID="ht1-bP-Zyt">
+            <objects>
+                <viewController id="mHj-aV-l2V" customClass="StoryPromptViewController" customModule="storyPrompt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A9u-kU-dbb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object-badge-banner" translatesAutoresizingMaskIntoConstraints="NO" id="I6S-gM-Wup">
+                                <rect key="frame" x="0.0" y="-52" width="414" height="1000"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="338-Ct-Jyl">
+                                <rect key="frame" x="87" y="393" width="240" height="110"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="LAU-6w-coW"/>
+                                    <constraint firstAttribute="width" constant="240" id="hqw-cv-PFH"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cCX-bb-Fl1"/>
+                        <color key="backgroundColor" red="0.0" green="0.89411764709999997" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I6S-gM-Wup" firstAttribute="centerX" secondItem="A9u-kU-dbb" secondAttribute="centerX" id="2j3-g3-sj4"/>
+                            <constraint firstItem="338-Ct-Jyl" firstAttribute="centerY" secondItem="I6S-gM-Wup" secondAttribute="centerY" id="7Qq-jF-TXX"/>
+                            <constraint firstItem="I6S-gM-Wup" firstAttribute="centerY" secondItem="A9u-kU-dbb" secondAttribute="centerY" id="gMW-t0-XeC"/>
+                            <constraint firstItem="338-Ct-Jyl" firstAttribute="centerX" secondItem="I6S-gM-Wup" secondAttribute="centerX" id="hrv-s9-v7k"/>
+                            <constraint firstItem="I6S-gM-Wup" firstAttribute="width" secondItem="A9u-kU-dbb" secondAttribute="width" id="yxh-ky-Hc0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="storyPromptTextView" destination="338-Ct-Jyl" id="9r4-8C-Ltr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQB-G8-Bxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094.2028985507247" y="-47.544642857142854"/>
+        </scene>
     </scenes>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="121"/>
         <image name="5.circle" catalog="system" width="128" height="121"/>
+        <image name="object-badge-banner" width="1000" height="1000"/>
         <image name="object-object_box-of-books" width="1000" height="1000"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
