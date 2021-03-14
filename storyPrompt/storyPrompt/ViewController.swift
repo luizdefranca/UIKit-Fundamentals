@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class ViewController: UIViewController{
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var verbTextField: UITextField!
     @IBOutlet weak var numberSlider: UISlider!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var storyPromptImageView: UIImageView!
 
 
     //MARK: - Actions
@@ -54,7 +56,10 @@ class ViewController: UIViewController{
         nounTextField.delegate = self
         verbTextField.delegate = self
         adjectiveTextField.delegate = self
-        
+
+        //Setting the storyPromptImageView
+        storyPromptImageView.isUserInteractionEnabled = true
+        storyPromptImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeImage)))
         dump(storyPrompt)
     }
 
@@ -63,6 +68,16 @@ class ViewController: UIViewController{
         storyPrompt.noun = nounTextField.text ?? ""
         storyPrompt.adjective = adjectiveTextField.text ?? ""
         storyPrompt.verb = verbTextField.text ?? ""
+    }
+
+    @objc func changeImage(){
+        var configurations = PHPickerConfiguration()
+        configurations.filter = .images
+        configurations.selectionLimit = 1
+        let controller = PHPickerViewController(configuration: configurations)
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+
     }
 }
 
@@ -74,4 +89,25 @@ extension ViewController: UITextFieldDelegate {
         updateStoryPrompt()
         return true
     }
+}
+
+extension ViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        if !results.isEmpty {
+            let result = results.first!
+            let itemProvider = result.itemProvider
+            if itemProvider.canLoadObject(ofClass: UIImage.self){
+                itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+                    guard let image = image as? UIImage else {
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self?.storyPromptImageView.image = image
+                    }
+                }
+            }
+        }
+    }
+
+
 }
