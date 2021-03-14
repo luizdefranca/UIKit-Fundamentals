@@ -17,6 +17,7 @@ class StoryPromptViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
 
         //set inital values to storyPrompt
         storyPrompt.noun = "toaster"
@@ -30,5 +31,12 @@ class StoryPromptViewController: UIViewController {
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
 }
