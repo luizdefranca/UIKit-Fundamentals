@@ -36,6 +36,7 @@ class ViewController: UIViewController{
     @IBAction func generateStoryPrompt(_ sender: Any) {
         updateStoryPrompt()
         dump(storyPrompt)
+        checkStoryPromptIsValid()
     }
 
 
@@ -59,7 +60,8 @@ class ViewController: UIViewController{
 
         //Setting the storyPromptImageView
         storyPromptImageView.isUserInteractionEnabled = true
-        storyPromptImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeImage)))
+        storyPromptImageView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                                         action: #selector(changeImage)))
         dump(storyPrompt)
     }
 
@@ -70,6 +72,18 @@ class ViewController: UIViewController{
         storyPrompt.verb = verbTextField.text ?? ""
     }
 
+    func checkStoryPromptIsValid(){
+        if storyPrompt.isValid(){
+            print("valid story prompt")
+        } else {
+            let alert = UIAlertController(title: "Invalid Story Prompt!",
+                                          message: "Please, fill out all of the fields",
+                                          preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
+    }
     @objc func changeImage(){
         var configurations = PHPickerConfiguration()
         configurations.filter = .images
@@ -103,11 +117,13 @@ extension ViewController: PHPickerViewControllerDelegate {
                     }
                     DispatchQueue.main.async {
                         self?.storyPromptImageView.image = image
+                        picker.dismiss(animated: true, completion: nil)
                     }
                 }
             }
         }
     }
+
 
 
 }
