@@ -48,11 +48,6 @@ class AddStoryPromptViewController: UIViewController{
         super.viewDidLoad()
         numberSlider.value = 7.5
 
-        storyPrompt.noun = "toaster"
-        storyPrompt.adjective = "smelly"
-        storyPrompt.verb = "burps"
-        storyPrompt.number = 10
-
         //Setting the textField delegates
         nounTextField.delegate = self
         verbTextField.delegate = self
@@ -84,7 +79,7 @@ class AddStoryPromptViewController: UIViewController{
 
     func checkStoryPromptIsValid(){
         if storyPrompt.isValid(){
-            print("valid story prompt")
+            performSegue(withIdentifier: "StoryPrompt", sender: nil)
         } else {
             let alert = UIAlertController(title: "Invalid Story Prompt!",
                                           message: "Please, fill out all of the fields",
