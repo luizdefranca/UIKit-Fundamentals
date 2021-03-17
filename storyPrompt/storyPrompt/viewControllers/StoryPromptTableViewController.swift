@@ -8,8 +8,11 @@
 import UIKit
 
 class StoryPromptTableViewController: UITableViewController {
+//MARK: - Propities
 
     var storyPrompts = [StoryPromptEntry]()
+
+//MARK: - ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyPrompt1 = StoryPromptEntry()
@@ -42,10 +45,9 @@ class StoryPromptTableViewController: UITableViewController {
 
         storyPrompts = [storyPrompt1, storyPrompt2, storyPrompt3, storyPrompt4]
 
-
     }
 
-    // MARK: - Table view data source
+    // MARK: Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
@@ -63,4 +65,10 @@ class StoryPromptTableViewController: UITableViewController {
         cell.imageView?.image = storyPrompts[indexPath.row].image
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyPrompt = storyPrompts[indexPath.row]
+        performSegue(withIdentifier: "ShowStoryPrompt", sender: storyPrompt)
+    }
+
 }
